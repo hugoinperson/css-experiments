@@ -1,0 +1,28 @@
+{
+    "name": "css_experiments",
+    "version": "1.0.0",
+    "description": "CSS and UI experiments",
+    "main": "index.js",
+    "scripts": {
+        "test": "xo"
+    },
+    "xo": {
+        "esnext": true,
+        "space": 4
+    },
+    "author": "hugoinperson",
+    "license": "ISC",
+    "devDependencies": {
+        "postcss-loader": "^1.0.0",
+        "precss": "^1.4.0",
+        "xo": "^0.17.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "autoprefixer": "^6.5.1",
+        "lost": "^7.1.0"
+    }
+}
