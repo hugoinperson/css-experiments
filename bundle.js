@@ -64,8 +64,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./node_modules/css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./node_modules/css-loader/index.js!./style.css");
+			module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/postcss-loader/index.js!./style.css", function() {
+				var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/postcss-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -83,7 +83,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n    background: red;\n    font-size: 12px;\n}\n", ""]);
+	exports.push([module.id, "body {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    background: #056ef0;\n    font-size: 12px;\n}\n\n.container{\n    display: -ms-grid;\n    display: grid;\n    -ms-grid-columns: 40px 50px auto 50px 40px;\n        grid-template-columns: 40px 50px auto 50px 40px;\n    -ms-grid-rows: 25% 100px auto;\n        grid-template-rows: 25% 100px auto;\n    width: 100%;\n    height: 100%;\n}\n\n.item-a {\n    background: red;\n    -ms-grid-column: 2;\n        grid-column-start: 2;\n    grid-column-end: 5;\n    -ms-grid-row: 1;\n        grid-row-start: 1;\n    grid-row-end: 3;\n}\n", ""]);
 
 	// exports
 
@@ -400,7 +400,7 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = "It works from content.js.";
+	module.exports = 'It works from content.js.';
 
 
 /***/ }
